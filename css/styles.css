@@ -1,0 +1,445 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+/*index background*/
+.index{
+    width: 100%;
+   /* height: 80vh;*/
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("../images/header-bg.jpg") center no-repeat fixed;
+    background-size: cover;
+}
+/*setting ends*/
+
+/*background for about*/
+.about{
+    background:url("../images/About.jpg") center no-repeat fixed;
+    background-size: cover;
+    /*background-color: black;
+    z-index: 5;*/
+}
+
+/*Background setting ends*/
+
+/*background for feedback*/
+.feedback{
+    background: url("https://images.unsplash.com/photo-1518135714426-c18f5ffb6f4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1073&q=80") center no-repeat fixed;
+    background-size: cover;
+   /* background-color: mintcream;*/
+}
+/*Background setting ends*/
+
+/*background for good article*/
+.Good{
+    background-color: sandybrown;
+    color: black;
+}
+/*Background setting ends*/
+.navbar {
+  background-color: #000;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar a.navbar-brand {
+  float: left;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 30px;
+  font-size: 22px;
+  /*text-transform: uppercase;*/
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.navbar a.navbar-brand span {
+  font-size: 28px;
+  font-weight: 700;
+}
+.navbar ul {
+  float: right;
+  list-style: none;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 50px;
+}
+
+.navbar ul li {
+  display: inline-block;
+}
+.navbar ul li a {
+  display: block;
+  text-align: center;
+  min-width: 120px;
+  padding: 0 30px;
+}
+
+.navbar ul li .active{
+    background-color: maroon;
+} 
+
+.navbar ul li a:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+.navbar .navbar-toggler {
+  display: none;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  background: url("https://source.unsplash.com/GYQBryEWh0Y/") no-repeat center center;
+  background-size: cover;
+  background-color: #000;
+}
+.container {
+    width: 100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  /*position: relative;
+  height: 100vh;
+  color: #fff;*/
+}
+.container h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20vh;
+}
+
+
+.Lorem-ipsum{
+    padding: 20px 10%;
+}
+.Lorem-ipsum h1{
+    font-size: 500%;
+    text-align: center;
+}
+.Lorem-ipsum p{
+    padding: 5% 0%;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-size: 150%;
+}
+
+.responsive{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Here lies text editing for my home */
+.container{
+    font-family: cursive;
+    padding: 350px;
+    text-align: center;
+}
+.container h1{
+    color: peru;
+    font-size: 500%;
+    padding-bottom: 10px;
+    letter-spacing: 4px;
+}
+.container p{
+    color: burlywood;
+    /*padding: 10px;*/
+    font-size: 200%;
+}
+
+#counter{
+    font-size: 200%;
+    color: burlywood;
+    text-align: center;
+}
+/*Here starts about*/
+#splash img{
+    padding-top: 90px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container_t {
+    color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: left;
+    padding-top: 2%;
+    
+}
+.table {
+    color: black;
+    font-size: 150%;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+table, td, th {
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+    border-width: 3px;
+
+}
+.contact{
+    text-align-last: center;
+    padding: 7%;
+}
+.contact p{
+    font-size: 150%;
+    color: white;
+}
+.contact a{
+    padding-top: 5%;
+    font-size: 125%;
+}
+
+/*ends about*/
+/* here starts text editing of Good-Article*/
+.read{
+    font-family: cursive;
+    font-size: 250%;
+    color: maroon;
+}
+
+/*scroll to top button as of now with Good-article*/
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: coral; /* Set a background color */
+  color: black; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+/* Feed back form */
+.form{
+    text-decoration-color: black;
+    padding: 100px;
+    font-size: 150%;
+    font-family: cursive;
+   
+}
+
+input[type=text] {
+    text-decoration-color: black;
+    
+  border: none;
+  border-bottom: 2px solid red;
+  background-color: transparent;
+  width: 90%;
+  padding: 10px;
+  font-size: 100%;
+    font-family: cursive;
+  /*  opacity: 0.75;*/
+    
+}
+
+select{
+    background-color: transparent;
+  width: 45%;
+  font-size: 100%;
+  padding: 10px;
+  font-family: cursive;
+    border-color: red;
+    border-width: 2px;
+}
+
+textarea{
+    background-color: transparent;
+    width: 100%;
+    font-size: 100%;
+    padding: 10px;
+    font-family: cursive;
+    border-color: red;
+    border-width: 2px;
+}
+
+#submit{
+    width: 30%;
+    padding: 5px;
+    font-family: cursive;
+    font-size: 100%;
+    background-color: goldenrod;
+    color: black;
+    border-color: black;
+    
+}
+.fed{
+    padding-top: 80px;
+    text-align: center;
+}
+
+.con{
+    font-size: 100%;
+    align-items: center;
+}
+#my_table{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: collapse;
+    background-color: mintcream;
+    opacity: 0.75;
+    color: black;
+    
+}
+#my_table th, td{
+    border: collapse;
+    border-color: darkred;
+    border-width: 2px;
+}
+
+/* ends here */
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* button ends here */
+
+#html { background-color: #e34f26; }
+#css { background-color: #002561; }
+#javascript { background-color: #333; }
+
+@media (max-width: 991px) {
+  .navbar ul {
+    padding: 0 10px;
+  }
+  .navbar ul li a {
+    min-width: 100px;
+    padding: 0 20px;
+  }
+    /*.Lorem-ipsum p{
+    padding: 20px 5px;
+    word-spacing: normal;
+    letter-spacing: normal;
+   /* font-size: 150%;
+      
+  }*/
+    .container{
+        padding: 350px 60px;
+    }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar ul {
+    width: 100%;
+    padding: 0;
+    background-color: rgba(0,0,0,0.9);
+    /* height: auto; */
+    height: 100vh;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
+  }
+  .navbar ul.open {
+    max-height: 100vh;
+  }
+  .navbar ul li {
+    width: 100%;
+    /* border-bottom: 1px solid rgba(255,255,255,0.3); */
+  }
+  .navbar ul li a {
+    padding: 0;
+  }
+  .navbar .navbar-toggler {
+    display: block;
+    position: absolute;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 3px solid #fff;
+    /* border: none; */
+    /* border-radius: 4px; */
+    outline: none;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+  .navbar .navbar-toggler span,
+  .navbar .navbar-toggler span::before,
+  .navbar .navbar-toggler span::after {
+    display: block;
+    content: '';
+    background-color: #fff;
+    height: 3px;
+    width: 28px;
+    border-radius: 4px;
+    transition: all ease-in-out 0.3s;
+  }
+  .navbar .navbar-toggler span::before {
+    transform: translateY(-8px);
+  }
+  .navbar .navbar-toggler span::after {
+    transform: translateY(5px);
+  }
+  
+  .navbar .navbar-toggler.open-navbar-toggler span {
+    /* transform: rotate(90deg); */
+    background-color: transparent;
+    /* transform: scale(0.85) rotate(270deg); */
+  }
+  .navbar .navbar-toggler.open-navbar-toggler span::before {
+    transform: translateY(0px) rotate(45deg);
+    /* transform: translateY(0px) scale(0.75) rotate(45deg); */
+  }
+  .navbar .navbar-toggler.open-navbar-toggler span::after {
+    transform: translateY(-3px) rotate(-45deg);
+    /* transform: translateY(-3px) scale(0.75) rotate(-45deg); */
+  }
+  .Lorem-ipsum{
+  /*  padding: 20px 0px;*/
+  }
+  .Lorem-ipsum h1{
+    font-size: 500%;
+    text-align: center;
+  }
+  .Lorem-ipsum p{
+    /*padding: 20px 5px;*/
+    word-spacing: normal;
+    letter-spacing: normal;
+    /*font-size: 110%;*/
+      
+  }
+/* home container */
+    .container{
+        padding: 350px 50px;
+    }
+    .container h1{
+        font-size: 300%;
+    }
+    .container p{
+        font-size: 150%;
+    }
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Vishal's Website</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body class="feedback" onload="loadTable()">
+        <nav class="navbar">
+            <a href="#" class="navbar-brand"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRueFrD5OvDuI8_a1kp04kB0XkmRZZ3RIDzKg0LlTkRUCTj3nis&s" style="width: 50px; vertical-align: middle" alt=" ">Vishal's</a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Good-article.html">Porsche</a></li>
+                <li><a href="Feedback.html" class="active">Feedback</a></li>
+            </ul>
+            <button class="navbar-toggler">
+                <span></span>
+            </button>
+        </nav>
+        
+        
+        <div class="fed">
+            <h1>Thank You</h1>
+            <h2>I would be greatfull to recieve your valuable feedback</h2>
+        </div>
+        
+        <div class="form">
+            <form id="fform"> 
+                <label for="Name">Name:</label><br> 
+                <input type="text" name="Name" id="name">
+                <br>
+                <br>
+                <label for="Skill">Skill:</label><br> 
+                <input type="text" name="Skill" id="skill">
+                <br>
+                <br>
+                <label for="Level">Level:</label> 
+                    <select name="Level" id="level"> 
+                        <option value="Proficient">Proficient</option> 
+                        <option value="Intermediate">Intermediate</option> 
+                        <option value="Beginner">Beginner</option>
+                        
+                    </select>
+                <br>
+                <br>
+                <label for="Description">Description:</label> 
+                <textarea rows="5" cols="50" name="Description"
+                            id="Description"></textarea>
+                <br>
+                <br>
+            </form>
+            
+            <button id="submit" onclick="funfun()">submit</button>
+        </div>
+            
+            <div class="con">
+                <table id="my_table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Skill</th>
+                        <th>Level</th>
+                        <th>Description</th>
+                    </tr>
+                </table>
+            </div>
+        
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        
+        <script type="text/javascript" src="../js/scripts.js"></script>
+    </body>
+</html>
