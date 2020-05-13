@@ -38,8 +38,8 @@ body {
 
 /*background for good article*/
 .Good{
-    background-color: sandybrown;
-    color: black;
+    background:url("../images/Messi_back.jpg") center no-repeat fixed;
+    background-size: cover;
 }
 /*Background setting ends*/
 .navbar {
