@@ -13,24 +13,23 @@ body {
 .index{
     width: 100%;
    /* height: 80vh;*/
-    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url("../images/header-bg.jpg") center no-repeat fixed;
+    background: /*linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%),*/ url("../images/adventure.jpg") center no-repeat fixed;
     background-size: cover;
 }
 /*setting ends*/
 
 /*background for about*/
 .about{
-    background:url("../images/About.jpg") center no-repeat fixed;
-    background-size: cover;
-    /*background-color: black;
-    z-index: 5;*/
+    /*background:url("../images/About.jpg") center no-repeat fixed;
+    background-size: cover;*/
+    background-color: whitesmoke;
 }
 
 /*Background setting ends*/
 
 /*background for feedback*/
 .feedback{
-    background: url("../images/Good-bye.jpg") center no-repeat fixed;
+    background: url("../images/time.jpg") center no-repeat fixed;
     background-size: cover;
    /* background-color: mintcream;*/
 }
@@ -38,8 +37,9 @@ body {
 
 /*background for good article*/
 .Good{
-    background:url("../images/Messi_back.jpg") center no-repeat fixed;
-    background-size: cover;
+    /*background:url("../images/Messi_back.jpg") center no-repeat fixed;
+    background-size: cover;*/
+    background-color: antiquewhite;
 }
 /*Background setting ends*/
 .navbar {
@@ -130,6 +130,7 @@ body {
 
 .Lorem-ipsum{
     padding: 20px 10%;
+    color: darkslategray;
 }
 .Lorem-ipsum h1{
     font-size: 500%;
@@ -150,24 +151,23 @@ body {
 /* Here lies text editing for my home */
 .container{
     font-family: cursive;
-    padding: 350px;
+    padding-top: 15%;
     text-align: center;
 }
 .container h1{
-    color: peru;
     font-size: 500%;
     padding-bottom: 10px;
     letter-spacing: 4px;
 }
 .container p{
-    color: burlywood;
+    color: dimgrey;
     /*padding: 10px;*/
     font-size: 200%;
 }
 
 #counter{
     font-size: 200%;
-    color: burlywood;
+    color: dimgrey;
     text-align: center;
 }
 /*Here starts about*/
@@ -217,7 +217,7 @@ table, td, th {
 .read{
     font-family: cursive;
     font-size: 250%;
-    color: navajowhite;
+    color: orange;
 }
 .textinGOOD{
     color: white;
