@@ -58,7 +58,7 @@ function topFunction() {
 function changeImage() {
     var imgArray=new Array();
 imgArray[0]= new Image();
-imgArray[0].src = "../images/pic1.jpeg";
+imgArray[0].src = "../images/pic1.jpg";
 
 imgArray[1]= new Image();
 imgArray[1].src = "../images/pic2.jpg";
@@ -71,14 +71,17 @@ imgArray[3].src = "../images/pic4.jpg";
 
 imgArray[4]= new Image();
 imgArray[4].src = "../images/pic5.jpg";
+
+imgArray[5]= new Image();
+imgArray[5].src = "../images/pic55.jpg";
     var element=document.getElementById("imgClickAndChange").src;
     //document.write(element);
     //document.write(imgArray[0]);
-    for(var i=0;i<=4;i++)
+    for(var i=0;i<=5;i++)
     {
         if(element===imgArray[i].src)
         {
-            document.getElementById("imgClickAndChange").src=imgArray[(i+1)%5].src;
+            document.getElementById("imgClickAndChange").src=imgArray[(i+1)%6].src;
         }
     }
     
