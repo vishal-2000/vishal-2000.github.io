@@ -72,16 +72,16 @@ imgArray[3].src = "../images/pic4.jpg";
 imgArray[4]= new Image();
 imgArray[4].src = "../images/pic5.jpg";
 
-imgArray[5]= new Image();
-imgArray[5].src = "../images/pic55.jpg";
+//imgArray[5]= new Image();
+//imgArray[5].src = "../images/pic55.jpg";
     var element=document.getElementById("imgClickAndChange").src;
     //document.write(element);
     //document.write(imgArray[0]);
-    for(var i=0;i<=5;i++)
+    for(var i=0;i<=4;i++)
     {
         if(element===imgArray[i].src)
         {
-            document.getElementById("imgClickAndChange").src=imgArray[(i+1)%6].src;
+            document.getElementById("imgClickAndChange").src=imgArray[(i+1)%5].src;
         }
     }
     
