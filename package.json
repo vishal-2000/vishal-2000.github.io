@@ -4,7 +4,7 @@
   "description": "Blog on some interesting projects, math and intelligence",
   "version": "1.3.12",
   "author": "Vishal Reddy Mandadi",
-  "license": "0BSD",
+  "license": "",
   "starter-name": "gatsby-starter-minimal-blog",
   "scripts": {
     "build": "gatsby build",
