@@ -1,3 +1,0 @@
-+++
-author = "Vishal Reddy Mandadi"
-+++
