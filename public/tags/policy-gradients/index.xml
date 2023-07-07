@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>policy-gradients on Vishal Reddy Mandadi</title>
+    <link>https://vishal-2000.github.io/tags/policy-gradients/</link>
+    <description>Recent content in policy-gradients on Vishal Reddy Mandadi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://vishal-2000.github.io/tags/policy-gradients/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Policy Gradients</title>
+      <link>https://vishal-2000.github.io/post/policy_gradients/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://vishal-2000.github.io/post/policy_gradients/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
