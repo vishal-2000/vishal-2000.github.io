@@ -39,8 +39,9 @@ metaDataFormat= "yaml"
   img_title = "Yo!"
   icon = "images/baymax_logo.jpg"
   quote = "Everything is theoretically impossible, until it is done - Robert A. Heinlein"
-  description= "I am an computer science undergraduate at IIIT-Hyderabad, immersed in the captivating realm of robotics under the mentorship of Dr. K. Madhava Krishna at the Robotics Research Center, IIIT-H. My current focus lies in the fascinating domains of robot learning, reinforcement learning (RL), and generative models, specifically within the realm of Robotic Manipulators. My research endeavors revolve around the creation of transformative learning frameworks for manipulators, empowering these remarkable machines to emulate human-level competence in accomplishing household tasks."
-  description2 = "Looking ahead, my ultimate aspiration encompasses the harmonious fusion of neuroscience and AI/robotics, akin to the historical symbiosis witnessed between the field of aerodynamics and the pursuit of avian mimicry, which culminated in the advent of aviation as we know it today."
+  description1= "Looking for graduate MS/PhD options in Fall 2024 (Robot Learning)"
+  description2= "I am an computer science undergraduate at IIIT-Hyderabad, immersed in the captivating realm of robotics under the mentorship of Dr. K. Madhava Krishna at the Robotics Research Center, IIIT-H. My current focus lies in the fascinating domains of robot learning, reinforcement learning (RL), and generative models, specifically within the realm of Robotic Manipulators. My research endeavors revolve around the creation of transformative learning frameworks for manipulators, empowering these remarkable machines to emulate human-level competence in accomplishing household tasks."
+  description3 = "Looking ahead, my ultimate aspiration encompasses the harmonious fusion of neuroscience and AI/robotics, akin to the historical symbiosis witnessed between the field of aerodynamics and the pursuit of avian mimicry, which culminated in the advent of aviation as we know it today."
   licenseUrl = ""
 
  # Social icons
