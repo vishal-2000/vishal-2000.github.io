@@ -58,6 +58,10 @@ metaDataFormat= "yaml"
     url  = "https://twitter.com/VishalMandadi"
 
   [[params.social]]
+    name = "googlescholar"
+    url  = "https://scholar.google.com/citations?user=RGEhkt4AAAAJ&hl=en"
+
+  [[params.social]]
     name = "github"
     url  = "https://github.com/vishal-2000"
 
