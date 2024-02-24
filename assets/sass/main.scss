@@ -187,7 +187,7 @@ p, li {
 .main {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 70%;
     margin: auto;
 }
 
@@ -209,7 +209,7 @@ p, li {
 }
 
 .image {
-    width: 200px;
+    width: 50%; // 200px
     border-radius: 200px;
     margin: 10px;
 }
@@ -320,7 +320,7 @@ blockquote.dark{
     border-left: 0px;
     border-bottom: 0px;
     margin: 20px auto auto auto;
-    width: 100%;
+    width: 70%;
     p {
         width: 90%;
         margin: 10px auto;

@@ -9,4 +9,4 @@ tags = [
 +++
 <!--more-->
 
-One week to go! Post will be live by 14th July, 2023:fire:!
+Coming up, January 1st, 2024:fire:!
