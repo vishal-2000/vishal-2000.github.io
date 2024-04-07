@@ -1,25 +1,38 @@
 {{define "main"}}
 <div class="intro" style="align-items: center">
   {{if .Site.Params.main.enabled }}
-  <img class="image" src='{{ .Site.Params.main.img | absURL }}' 
-	title="{{	.Site.Params.main.img_title }}" width="200px" 
-	alt="Author's picture or avatar or logo"/>
+  
+
+  <!-- <p>{{ .Site.Params.main.description1 | safeHTML }}</p> -->
+
+  <p style="font-size: calc(0.5em + 0.22vw);"> <img class="image" style="float: left; margin-right: 20px;" src='{{ .Site.Params.main.img | absURL }}' 
+    title="{{	.Site.Params.main.img_title }}" width="200px" 
+    alt="Author's picture or avatar or logo"/>
+
+    <!-- <span style="clear: left;">Text directly under the picture.</span> -->
+    
+    I am a research assistant at IIIT-Hyderabad, currently advised by <a href="https://robotics.iiit.ac.in/faculty_mkrishna/">Prof. K. Madhava Krishna</a> (IIIT-Hyderabad) and <a href="https://tuit.ut.ee/en/content/arun-kumar-singh">Prof. Arun Kumar Singh</a> (University of Tartu) in the Robotics lab (RRC), and <a href="https://makarandtapaswi.github.io/">Prof. Makarand Tapaswi</a> (IIIT-Hyderabad) and <a href="https://petrikvladimir.github.io/">Dr. Vladimir Petrik</a> (CTU, Prague) in the Computer Vision lab (CVIT). I currently work at the intersection of generative models, robot learning, and video understanding. 
+  
+    <br>
+    <br>
+
+    {{ .Site.Params.main.description3 | safeHTML }}
+
+  <br>
+  <br>
+  
+  <b>Research Interests: </b>{{ .Site.Params.main.description4 | safeHTML }} </p>
+
   <ul>
     <li class="intro-quote">{{ .Site.Params.main.quote }}</li>
   </ul>
-  {{end}}
 
   {{ partial "menu.html" . }}
 
-  <p>{{ .Site.Params.main.description1 | safeHTML }}</p>
 
-  <p>I am a research assistant at IIIT-Hyderabad, currently advised by <a href="https://robotics.iiit.ac.in/faculty_mkrishna/">Prof. K. Madhava Krishna</a> (IIIT-Hyderabad) and <a href="https://tuit.ut.ee/en/content/arun-kumar-singh">Prof. Arun Kumar Singh</a> (University of Tartu) in the Robotics lab (RRC), and <a href="https://makarandtapaswi.github.io/">Prof. Makarand Tapaswi</a> (IIIT-Hyderabad) and <a href="https://petrikvladimir.github.io/">Dr. Vladimir Petrik</a> (CTU, Prague) in the Computer Vision lab (CVIT). I currently work at the intersection of generative models, robot learning, and video understanding.</p>
+  <!-- <p>{{ .Site.Params.main.description5 | safeHTML }}</p> -->
 
-  <p>{{ .Site.Params.main.description3 | safeHTML }}</p>
-
-  <p><b>Research Interests: </b>{{ .Site.Params.main.description4 | safeHTML }}</p>
-
-  <p>{{ .Site.Params.main.description5 | safeHTML }}</p>
+  {{end}}
 
   </div>
 
@@ -93,7 +106,7 @@
 <table width="100%" align="center" valign="middle" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
     <tbody>
       <!-- <tr> -->
-      <tr style="border-bottom: 2px solid #d11248;">
+      <tr >
         <td width="30%">
           <div class="one" style="text-align:center;">
               <!-- <img src="../static/projects/edmp/edmp_demo.gif" style="max-height: 400px;"> -->
@@ -101,19 +114,19 @@
           </div>
         </td>
         <td valign="top" width="70%">
-          <h4>
+          <h5>
             EDMP: Ensemble-of-costs-guided Diffusion for Motion Planning
-          </h4>
-          <p class="authors" style="display:inline;">
+          </h5>
+          <p class="authors" style="display:inline; font-size: calc(0.5em + 0.22vw);">
             Kallol Saha*, <strong>Vishal Mandadi*</strong>, Jayaram Reddy*, Ajit Srikanth, Aditya Agarwal, Bipasha Sen, Arun Singh, Madhava Krishna
           </p>
-          <p>* denotes equal contribution and random author order</p>
+          <p style="font-size: calc(0.5em + 0.22vw);">* denotes equal contribution and random author order</p>
         </p>
-           <p>
+           <p style="font-size: calc(0.5em + 0.22vw);">
             <!-- <i><span style="color:gray"></span>Under Review</i>, <a href="https://www.icra2023.org/" class="uline-special"><span style="color:red">ICRA 2023</span></a> -->
             <a href="https://arxiv.org/pdf/2309.11414.pdf" class="uline-special"><span style="color:red">ICRA 2024</span></a>
           </p>
-          <p>
+          <p style="font-size: calc(0.5em + 0.22vw);">
             <!-- <a href="https://arxiv.org/pdf/2301.07213.pdf">Paper / </a> -->
             <a href="https://arxiv.org/pdf/2309.11414.pdf">Paper / </a>
             <a href="https://ensemble-of-costs-diffusion.github.io/">Project Page / </a>
@@ -125,30 +138,30 @@
             <!-- <a href="https://youtu.be/lyEc991wyTI">Long Video</a> -->
           </p>
           <!-- &nbsp;<p style="color:red">More details coming soon!</p> -->
-          <p>
+          <!-- <p>
             We propose EDMP for motion planning, that combines the strengths of classical motion planning (offering remarkable adaptability) and deep-learning-based motion planning (prior understanding over diverse valid trajectories). 
             Our diffusion-based network is trained on a set of diverse kinematically valid trajectories. For any new scene at the time of inference,
             we compute scene-specific costs such as "collision cost" and guide the generation of valid trajectories that satisfy scene-specific constraints.
-          </p>
+          </p> -->
         </td>
       </tr>
-      <tr style="border-bottom: 2px solid #d11248;">
+      <tr >
         <td width="30%">
           <div class="one" style="text-align:center;">
               <img src="projects/case23/case23.png" style="max-width: 95%;">
           </div>
         </td>
         <td valign="top" width="70%">
-          <h4>
+          <h5>
             Disentangling Planning and Control for Non-prehensile Tabletop Manipulation
-          </h4>
-          <p class="authors" style="display:inline"><strong>Vishal Mandadi*</strong>, Kallol Saha, Dipanwita Guhathakurta, M. Nomaan Qureshi, Aditya Agarwal, Bipasha Sen, Dipanjan Das, Brojeshwar Bhowmick, Arun Singh, Madhava Krishna</p>
+          </h5>
+          <p class="authors" style="display:inline; font-size: calc(0.5em + 0.22vw);"><strong>Vishal Mandadi*</strong>, Kallol Saha, Dipanwita Guhathakurta, M. Nomaan Qureshi, Aditya Agarwal, Bipasha Sen, Dipanjan Das, Brojeshwar Bhowmick, Arun Singh, Madhava Krishna</p>
         </p>
-           <p>
+           <p style="font-size: calc(0.5em + 0.22vw);">
             <!-- <i><span style="color:gray"></span>Under Review</i>, <a href="https://www.icra2023.org/" class="uline-special"><span style="color:red">ICRA 2023</span></a> -->
             <a href="https://case2023.org/" class="uline-special"><span style="color:red">CASE 2023</span></a>
           </p>
-          <p>
+          <p style="font-size: calc(0.5em + 0.22vw);">
             <!-- <a href="https://arxiv.org/pdf/2301.07213.pdf">Paper / </a> -->
             <a href="https://ieeexplore.ieee.org/abstract/document/10260462">Paper</a>
             <!-- <a href="https://bipashasen.github.io/scarp/">Project Page / </a> -->
@@ -158,11 +171,11 @@
             <!-- <a href="https://youtu.be/lyEc991wyTI">Long Video</a> -->
             <!-- &nbsp;<p style="color:red">More details coming soon!</p> -->
           </p>
-          <p>
+          <!-- <p>
             We propose a framework that disentangles planning and control for tabletop manipulation in unknown scenes 
             using a pushing-by-striking method (without tactile feedback) by explicitly modeling the object dynamics. 
             Our method consists of two components: an A* planner for path-planning and a low-level RL controller that models object dynamics. 
-          </p>
+          </p> -->
         </td>
       </tr>
   <tr>
@@ -172,17 +185,20 @@
     </div>
   </td>
   <td valign="top" width="70%">
-    <h4>
+    <h5>
       Approaches and Challenges in Robotic Perception for Table-top Rearrangement and Planning
-    </h4>
-    <p class="self" style="display:inline">Aditya Agarwal*, Bipasha Sen*, Shankara Narayanan V*, <strong>Vishal Reddy Mandadi*</strong>, Brojeshwar Bhowmick, K Madhava Krishna</p>
-    <p>* denotes equal contribution and random author order</p>
+    </h5>
+    <p class="self" style="display:inline; font-size: calc(0.5em + 0.22vw);">Aditya Agarwal*, Bipasha Sen*, Shankara Narayanan V*, <strong>Vishal Reddy Mandadi*</strong>, Brojeshwar Bhowmick, K Madhava Krishna
     </p>
-    <p>
+    <p style="font-size: calc(0.5em + 0.22vw);">
+      * denotes equal contribution and random author order
+    </p>
+    <!-- </p> -->
+    <p style="font-size: calc(0.5em + 0.22vw);">
       <a href="https://rpal.cse.usf.edu/rgmc_icra2022/" class="uline-special"><span style="color:red">3<sup>rd</sup> in ICRA 2022 Open Cloud Table Organization Challenge</span></a>
       <!-- 3<sup>rd</sup> in ICRA 2022 Open Cloud Table Organization Challenge -->
     </p>
-    <p>
+    <p style="font-size: calc(0.5em + 0.22vw);">
       <a href="https://arxiv.org/pdf/2205.04090.pdf">Paper / </a>
       <a href="https://rpal.cse.usf.edu/rgmc_icra2022/">Competition / </a>
       <a href="https://youtu.be/5VSP49OB0ZI">Video / </a>
@@ -191,12 +207,12 @@
       <a href="https://blogs.iiit.ac.in/rrc/">News1 / </a>
       <a href="https://www.iiit.ac.in/files/media/Sakshi-RRC.jpeg">News2</a>
     </p>
-    <p>
+    <!-- <p>
       In this challenge, we proposed an end-to-end pipeline in ROS incorporating the perception and planning stacks to manipulate objects from their 
       initial configuration to a desired target configuration on a tabletop scene using a two-finger manipulator. 
       The pipeline involves the following steps - (1) 3D scene registration, (2) Object pose estimation, (3) Grasp generation, 
       (4) Task Planning, and (5) Motion Planning. 
-    </p>
+    </p> -->
   </td>
   </tr>
   </tbody>

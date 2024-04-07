@@ -2,10 +2,11 @@
 author = "Vishal"
 title = "Policy Gradients"
 date = "2023-07-07"
-description = "Guide to emoji usage in Hugo"
+description = "Math behind Reinforce"
 tags = [
     "policy-gradients",
 ]
+draft=true
 +++
 <!--more-->
 
