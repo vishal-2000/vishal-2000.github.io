@@ -27,7 +27,12 @@
   <br>
   <br>
   
-  <b>Research Interests: </b>{{ .Site.Params.main.description4 | safeHTML }} </p>
+  <b>What have I been up to? </b>{{ .Site.Params.main.description4 | safeHTML }} 
+
+  <br>
+  <br>
+  <b>Now and Next Steps:  </b>{{ .Site.Params.main.description5 | safeHTML}}
+  </p>
 
   <ul>
     <li class="intro-quote">{{ .Site.Params.main.quote }}</li>
@@ -112,6 +117,45 @@
 <table width="100%" align="center" valign="middle" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
     <tbody>
       <!-- <tr> -->
+        <tr >
+          <td width="30%">
+            <div class="one" style="text-align:center;">
+                <!-- <img src="../static/projects/edmp/edmp_demo.gif" style="max-height: 400px;"> -->
+                <img src="projects/gpd/gpd.gif" style="max-width: 95%;">
+            </div>
+          </td>
+          <td valign="top" width="70%">
+            <h5>
+              GPD: Guided Polynomial Diffusion for Motion Planning
+            </h5>
+            <p class="authors" style="display:inline; font-size: calc(0.5em + 0.22vw);">
+              Ajit Srikanth, Parth Mahajan, Kallol Saha*, <strong>Vishal Mandadi*</strong>, Pranjal Paul, Pawan Wadhwani, Brojeshwar Bhowmick, Arun Singh, Madhava Krishna
+            </p>
+            <p style="font-size: calc(0.5em + 0.22vw);">* denotes equal contribution and random author order</p>
+          </p>
+             <p style="font-size: calc(0.5em + 0.22vw);">
+              <!-- <i><span style="color:gray"></span>Under Review</i>, <a href="https://www.icra2023.org/" class="uline-special"><span style="color:red">ICRA 2023</span></a> -->
+              <a href="https://arxiv.org/abs/2501.18229" class="uline-special"><span style="color:red">Under Review</span></a>
+            </p>
+            <p style="font-size: calc(0.5em + 0.22vw);">
+              <!-- <a href="https://arxiv.org/pdf/2301.07213.pdf">Paper / </a> -->
+              <a href="https://arxiv.org/abs/2501.18229">Paper / </a>
+              <a href="https://guided-polynomial-diffusion.github.io/">Project Page / </a>
+              <!-- <a href="https://bipashasen.github.io/scarp/">Project Page / </a> -->
+              <!-- <a href="https://www.youtube.com/watch?v=o2PuRVZ3jJA">Short Video / </a> -->
+              <!-- <a href="https://github.com/vishal-2000/EDMP">Code/ </a> -->
+              <!-- <a href="https://youtu.be/F2UI0UNsdjo">Video</a> -->
+              <!-- <a href="images/projects/scarp_icra2023/poster.pdf">Poster / </a> -->
+              <!-- <a href="https://youtu.be/lyEc991wyTI">Long Video</a> -->
+            </p>
+            <!-- &nbsp;<p style="color:red">More details coming soon!</p> -->
+            <!-- <p>
+              We propose EDMP for motion planning, that combines the strengths of classical motion planning (offering remarkable adaptability) and deep-learning-based motion planning (prior understanding over diverse valid trajectories). 
+              Our diffusion-based network is trained on a set of diverse kinematically valid trajectories. For any new scene at the time of inference,
+              we compute scene-specific costs such as "collision cost" and guide the generation of valid trajectories that satisfy scene-specific constraints.
+            </p> -->
+          </td>
+        </tr>
       <tr >
         <td width="30%">
           <div class="one" style="text-align:center;">
@@ -126,7 +170,7 @@
           <p class="authors" style="display:inline; font-size: calc(0.5em + 0.22vw);">
             Kallol Saha*, <strong>Vishal Mandadi*</strong>, Jayaram Reddy*, Ajit Srikanth, Aditya Agarwal, Bipasha Sen, Arun Singh, Madhava Krishna
           </p>
-          <p style="font-size: calc(0.5em + 0.22vw);">* denotes equal contribution and random author order</p>
+          <p style="font-size: calc(0.5em + 0.22vw);">* denotes equal contribution</p>
         </p>
            <p style="font-size: calc(0.5em + 0.22vw);">
             <!-- <i><span style="color:gray"></span>Under Review</i>, <a href="https://www.icra2023.org/" class="uline-special"><span style="color:red">ICRA 2023</span></a> -->
