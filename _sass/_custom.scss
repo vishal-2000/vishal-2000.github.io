@@ -1,0 +1,437 @@
+/* ==========================================================================
+   CIRCUIT COURT — CUSTOM STYLES
+   Robotics + sports themed overrides on top of academicpages/air
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   TYPOGRAPHY OVERRIDES
+   -------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+body, p, li, td {
+  font-family: "Inter", -apple-system, sans-serif;
+}
+
+code, pre, kbd, .section-label, .pub-status {
+  font-family: "JetBrains Mono", Monaco, monospace;
+}
+
+/* Page title — pull down from the default ~39px/31px */
+.page__title {
+  font-size: 1.4em !important;
+}
+
+/* Body content — slightly tighter */
+.page__content {
+  font-size: 0.92em;
+
+  p, li { line-height: 1.7; }
+}
+
+/* --------------------------------------------------------------------------
+   ROBOTIC SECTION LABELS
+   Small monospace tag above section headings
+   -------------------------------------------------------------------------- */
+
+.section-label {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--global-base-color);
+  margin-bottom: 0.3em;
+  opacity: 0.85;
+
+  &::before { content: "[ "; }
+  &::after  { content: " ]"; }
+}
+
+/* --------------------------------------------------------------------------
+   BLINKING CURSOR
+   -------------------------------------------------------------------------- */
+
+.blink-cursor::after {
+  content: "_";
+  color: var(--global-base-color);
+  animation: blink 1.1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   PUBLICATION STATUS BADGES
+   -------------------------------------------------------------------------- */
+
+.pub-status {
+  display: inline-block;
+  font-size: 0.68em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+
+  &--published {
+    color: var(--badge-published);
+    background: color-mix(in srgb, var(--badge-published) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--badge-published) 30%, transparent);
+  }
+  &--review {
+    color: var(--badge-review);
+    background: color-mix(in srgb, var(--badge-review) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--badge-review) 30%, transparent);
+  }
+  &--conference {
+    color: var(--badge-conference);
+    background: color-mix(in srgb, var(--badge-conference) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--badge-conference) 30%, transparent);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   PUBLICATION ARCHIVE LIST — tighter card feel
+   -------------------------------------------------------------------------- */
+
+.archive__item {
+  border: 1px solid var(--global-dark-border-color);
+  border-radius: 8px;
+  padding: 1.2em 1.4em;
+  margin-bottom: 1.2em;
+  background: var(--surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--global-base-color);
+    box-shadow: 0 0 0 1px var(--global-base-color), 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &-title a {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SIDEBAR AUTHOR BIO TWEAKS
+   -------------------------------------------------------------------------- */
+
+.author__bio {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.author__name {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   OFFLINE ACTIVITIES (SPORTS SECTION)
+   -------------------------------------------------------------------------- */
+
+.sports-section {
+  margin-top: 2.5em;
+  padding: 1.4em 1.6em;
+  border: 1px solid var(--global-dark-border-color);
+  border-left: 3px solid var(--accent-orange);
+  border-radius: 6px;
+  background: var(--accent-orange-dim);
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+  overflow: hidden;
+
+  p { margin-bottom: 0.6em; font-size: 0.95em; }
+}
+
+.sports-content { flex: 1; min-width: 0; }
+
+.sports-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 0.8em;
+}
+
+.sport-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  padding: 0.25em 0.7em;
+  border-radius: 4px;
+  border: 1px solid var(--accent-orange);
+  color: var(--accent-orange);
+  background: var(--accent-orange-dim);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: default;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+}
+
+/* Sports animation column */
+.sports-anim {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75em;
+  padding-top: 0.25em;
+}
+
+.ball-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90px;
+  justify-content: flex-end;
+}
+
+.tennis-ball-svg {
+  animation: ball-bounce 0.85s cubic-bezier(0.33, 0, 0.66, 1) infinite alternate;
+  transform-origin: center bottom;
+  display: block;
+}
+
+.ball-shadow {
+  width: 36px;
+  height: 7px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  margin-top: 2px;
+  animation: shadow-scale 0.85s cubic-bezier(0.33, 0, 0.66, 1) infinite alternate;
+}
+
+.racket-svg {
+  color: var(--accent-orange);
+  animation: racket-sway 2.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* --------------------------------------------------------------------------
+   BACKGROUND FLOATING ELEMENTS (balls + robots)
+   -------------------------------------------------------------------------- */
+
+.bg-floats {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-ball-1 {
+  position: absolute;
+  top: 12%;
+  right: 4%;
+  width: 64px;
+  opacity: 0.18;
+  animation: float-a 9s ease-in-out infinite;
+}
+
+.bg-ball-2 {
+  position: absolute;
+  bottom: 28%;
+  right: 18%;
+  width: 40px;
+  opacity: 0.14;
+  animation: float-b 13s ease-in-out infinite;
+}
+
+.bg-robot-1 {
+  position: absolute;
+  top: 55%;
+  right: 2%;
+  width: 68px;
+  opacity: 0.15;
+  color: var(--global-base-color);
+  animation: robot-walk 1.8s ease-in-out infinite;
+}
+
+.bg-robot-2 {
+  position: absolute;
+  top: 28%;
+  right: 8%;
+  width: 50px;
+  opacity: 0.12;
+  color: var(--global-base-color);
+  animation: robot-jump 2.6s ease-in-out infinite;
+}
+
+/* Light mode: higher still since pale background washes them out */
+:root {
+  .bg-ball-1  { opacity: 0.65; }
+  .bg-ball-2  { opacity: 0.55; }
+  .bg-robot-1 { opacity: 0.55; }
+  .bg-robot-2 { opacity: 0.45; }
+}
+
+/* --------------------------------------------------------------------------
+   VIZZY — CORNER MASCOT
+   -------------------------------------------------------------------------- */
+
+.vizzy-corner {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  width: 52px;
+  cursor: default;
+  animation: vizzy-bob 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.15);
+    animation-play-state: paused;
+  }
+}
+
+/* Eye blink: targets circles with class vizzy-eye */
+.vizzy-eye {
+  animation: eye-blink 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.vizzy-eye:last-of-type {
+  animation-delay: 0.08s;
+}
+
+.antenna-dot {
+  animation: antenna-pulse 2s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   KEYFRAMES
+   -------------------------------------------------------------------------- */
+
+@keyframes ball-bounce {
+  0%   { transform: translateY(0)     scaleX(1.25) scaleY(0.78); }
+  40%  { transform: translateY(-52px) scaleX(1)    scaleY(1); }
+  100% { transform: translateY(-72px) scaleX(0.95) scaleY(1.05); }
+}
+
+@keyframes shadow-scale {
+  0%   { transform: scaleX(1.3);  opacity: 0.28; }
+  100% { transform: scaleX(0.55); opacity: 0.07; }
+}
+
+@keyframes racket-sway {
+  0%, 100% { transform: rotate(-14deg) translateY(2px); }
+  50%      { transform: rotate(14deg)  translateY(-4px); }
+}
+
+@keyframes float-a {
+  0%, 100% { transform: translateY(0)    rotate(0deg); }
+  50%      { transform: translateY(-22px) rotate(200deg); }
+}
+
+@keyframes float-b {
+  0%, 100% { transform: translateY(0)   rotate(0deg); }
+  40%      { transform: translateY(-14px) rotate(150deg); }
+  70%      { transform: translateY(10px)  rotate(280deg); }
+}
+
+@keyframes robot-walk {
+  0%, 100% { transform: translateY(0)    rotate(-3deg); }
+  25%       { transform: translateY(-6px) rotate(-1deg); }
+  50%       { transform: translateY(-2px) rotate(3deg); }
+  75%       { transform: translateY(-6px) rotate(1deg); }
+}
+
+@keyframes robot-jump {
+  0%, 100% { transform: translateY(0); }
+  12%       { transform: translateY(4px); }
+  40%       { transform: translateY(-22px); }
+  60%       { transform: translateY(-24px); }
+  78%       { transform: translateY(-6px); }
+  90%       { transform: translateY(2px); }
+}
+
+@keyframes vizzy-bob {
+  0%, 100% { transform: translateY(0)    rotate(0deg); }
+  25%       { transform: translateY(-4px) rotate(-2deg); }
+  50%       { transform: translateY(-7px) rotate(0deg); }
+  75%       { transform: translateY(-4px) rotate(2deg); }
+}
+
+@keyframes eye-blink {
+  0%, 88%, 96%, 100% { transform: scaleY(1); }
+  92%                { transform: scaleY(0.08); }
+}
+
+@keyframes antenna-pulse {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(1.4); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tennis-ball-svg, .ball-shadow, .racket-svg,
+  .bg-ball-1, .bg-ball-2, .bg-robot-1, .bg-robot-2,
+  .vizzy-corner, .vizzy-eye, .antenna-dot { animation: none; }
+}
+
+/* --------------------------------------------------------------------------
+   MASTHEAD / NAV TWEAKS
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.greedy-nav a {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER
+   -------------------------------------------------------------------------- */
+
+/* Light mode: teal bg needs white text */
+:root .page__footer {
+  color: rgba(255, 255, 255, 0.88);
+
+  a { color: rgba(255, 255, 255, 0.88); }
+
+  .fas, .fab, .far { color: rgba(255, 255, 255, 0.88); }
+}
+
+.page__footer-copyright {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75em;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   NEWS / RECENT ITEMS on homepage
+   -------------------------------------------------------------------------- */
+
+.page__content {
+  h2 {
+    font-size: 1.3em;
+    margin-top: 2em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--global-dark-border-color);
+  }
+}

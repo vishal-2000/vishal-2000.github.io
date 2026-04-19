@@ -1,0 +1,61 @@
+/* ==========================================================================
+   SUNLIT COURT — LIGHT MODE
+   ========================================================================== */
+
+$primary-color              : #007a63;
+$dark-primary-color         : #005f4d;
+$darker-primary-color       : #004a3c;
+$light-primary-color        : #6b7280;
+
+$background                 : #f4f6fb;
+$background-light           : #ffffff;
+$background-lighter         : #eef1f8;
+$text                       : #111827;
+$link                       : #007a63;
+$link-dark                  : #005f4d;
+$link-light                 : #009678;
+$footer                     : #007a63;
+
+$danger-color               : #dc2626;
+$info-color                 : #0284c7;
+$notice-color               : #6b7280;
+$success-color              : #059669;
+$warning-color              : #b45309;
+
+$border-radius              : 6px;
+$box-shadow                 : 0 4px 24px rgba(0, 0, 0, 0.08);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+:root {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$footer};
+    --global-border-color               : #d1d5db;
+    --global-dark-border-color          : #e5e7eb;
+    --global-code-background-color      : #f3f4f6;
+    --global-code-text-color            : #{$primary-color};
+    --global-fig-caption-color          : #{$light-primary-color};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-visited         : #{$link-dark};
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #{$light-primary-color};
+    --global-thead-color                : #{$background-lighter};
+
+    /* Custom theme tokens */
+    --accent-orange                     : #d4500e;
+    --accent-orange-dim                 : rgba(212, 80, 14, 0.10);
+    --teal-dim                          : rgba(0, 122, 99, 0.08);
+    --badge-published                   : #059669;
+    --badge-review                      : #b45309;
+    --badge-conference                  : #0284c7;
+    --surface                           : #{$background-light};
+    --surface-elevated                  : #{$background-lighter};
+}

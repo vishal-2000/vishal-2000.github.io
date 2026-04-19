@@ -1,0 +1,61 @@
+/* ==========================================================================
+   CIRCUIT COURT — DARK MODE
+   ========================================================================== */
+
+$primary-color              : #00d4aa;
+$dark-primary-color         : #009980;
+$darker-primary-color       : #007a63;
+$light-primary-color        : #6b7892;
+
+$background                 : #0d1117;
+$background-light           : #161b27;
+$background-lighter         : #1e2538;
+$text                       : #e8eaed;
+$link                       : #00d4aa;
+$link-dark                  : #009980;
+$link-light                 : #00efc0;
+$footer                     : #0a0e14;
+
+$danger-color               : #ff4d6d;
+$info-color                 : #48cae4;
+$notice-color               : #6b7892;
+$success-color              : #3ddc97;
+$warning-color              : #ffd166;
+
+$border-radius              : 6px;
+$box-shadow                 : 0 4px 24px rgba(0, 0, 0, 0.5);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+html[data-theme="dark"] {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$footer};
+    --global-border-color               : #2d3752;
+    --global-dark-border-color          : #1e2538;
+    --global-code-background-color      : #{$background-light};
+    --global-code-text-color            : #{$primary-color};
+    --global-fig-caption-color          : #{$light-primary-color};
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-light};
+    --global-link-color-visited         : #{$link-dark};
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #{$light-primary-color};
+    --global-thead-color                : #{$background-lighter};
+
+    /* Custom theme tokens */
+    --accent-orange                     : #ff6b35;
+    --accent-orange-dim                 : rgba(255, 107, 53, 0.12);
+    --teal-dim                          : rgba(0, 212, 170, 0.10);
+    --badge-published                   : #3ddc97;
+    --badge-review                      : #ffd166;
+    --badge-conference                  : #48cae4;
+    --surface                           : #{$background-light};
+    --surface-elevated                  : #{$background-lighter};
+}
