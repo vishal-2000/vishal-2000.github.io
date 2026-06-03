@@ -694,9 +694,9 @@ code, pre, kbd, .section-label, .pub-status {
 @media (max-width: 768px) {
   .greedy-nav .visible-links { padding-right: 0; }
 
-  /* Park the picker just left of the hamburger */
+  /* Park the picker left of the hamburger, with a clear gap between them */
   .cc-theme-picker {
-    right: 2.6rem;
+    right: 4rem;
     z-index: 110;          /* above the hamburger (100) so the panel layers right */
   }
 
