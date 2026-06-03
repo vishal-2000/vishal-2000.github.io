@@ -700,22 +700,28 @@ code, pre, kbd, .section-label, .pub-status {
     z-index: 110;          /* above the hamburger (100) so the panel layers right */
   }
 
-  /* Show the toggle, styled like the hamburger button */
+  /* Show the toggle (crossed racquets), styled like the hamburger button */
   .cc-theme-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 2.5rem;
-    width: 2.2rem;
+    width: 2.4rem;
     padding: 0;
     border: 0;
     background: transparent;
-    color: var(--global-masthead-link-color);
+    color: var(--cc-brass);
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
+    transition: transform 0.15s ease, color 0.18s ease;
   }
-  .cc-court-icon--toggle { width: 26px; height: 13px; }
+  .cc-theme-toggle:hover,
+  .cc-theme-picker.is-open .cc-theme-toggle {
+    color: var(--cc-court-bright);
+    transform: scale(1.08);
+  }
+  .cc-racquets-icon { width: 25px; height: 25px; }
 
   /* Panel becomes a dropdown, mirroring the tabs dropdown styling */
   .cc-theme-panel {
