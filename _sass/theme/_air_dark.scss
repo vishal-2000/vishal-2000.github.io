@@ -32,7 +32,7 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-html[data-theme="dark"] {
+html[data-theme="night"] {
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$footer};
@@ -69,4 +69,84 @@ html[data-theme="dark"] {
     --badge-conference                  : #9fd6b4;
     --surface                           : #{$background-light};
     --surface-elevated                  : #{$background-lighter};
+}
+
+/* ==========================================================================
+   CLAY COURT — warm terracotta, cream lines, sand accent
+   ========================================================================== */
+html[data-theme="clay"] {
+    --global-base-color                 : #e6b483;
+    --global-bg-color                   : #8a4228;
+    --global-footer-bg-color            : #6f3420;
+    --global-border-color               : rgba(245, 233, 220, 0.20);
+    --global-dark-border-color          : rgba(245, 233, 220, 0.12);
+    --global-code-background-color      : #793a23;
+    --global-code-text-color            : #f4d8b8;
+    --global-fig-caption-color          : #d7b9a3;
+    --global-link-color                 : #f0c9a0;
+    --global-link-color-hover           : #fbe3c8;
+    --global-link-color-visited         : #e6b483;
+    --global-masthead-link-color        : #f5e9dc;
+    --global-masthead-link-color-hover  : #f0c9a0;
+    --global-text-color                 : #f5e9dc;
+    --global-text-color-light           : #d7b9a3;
+    --global-thead-color                : #9c4f33;
+
+    --cc-court                          : #fbeede;
+    --cc-court-bright                   : #f0c9a0;
+    --cc-paper                          : #8a4228;
+    --cc-paper-card                     : #9c4f33;
+    --cc-ink                            : #f5e9dc;
+    --cc-brass                          : #e6b483;
+    --cc-brass-soft                     : rgba(230, 180, 131, 0.26);
+    --cc-line                           : rgba(245, 233, 220, 0.22);
+
+    --accent-orange                     : #e6b483;
+    --accent-orange-dim                 : rgba(230, 180, 131, 0.14);
+    --teal-dim                          : rgba(245, 233, 220, 0.06);
+    --badge-published                   : #f0c9a0;
+    --badge-review                      : #fbe3c8;
+    --badge-conference                  : #f0c9a0;
+    --surface                           : #9c4f33;
+    --surface-elevated                  : #793a23;
+}
+
+/* ==========================================================================
+   HARD COURT — deep stadium blue, cream text, sky accent
+   ========================================================================== */
+html[data-theme="hard"] {
+    --global-base-color                 : #7fbce0;
+    --global-bg-color                   : #15395c;
+    --global-footer-bg-color            : #0f2c49;
+    --global-border-color               : rgba(232, 238, 245, 0.20);
+    --global-dark-border-color          : rgba(232, 238, 245, 0.12);
+    --global-code-background-color      : #1c4670;
+    --global-code-text-color            : #bfe0f2;
+    --global-fig-caption-color          : #a6b6c8;
+    --global-link-color                 : #8fc8ec;
+    --global-link-color-hover           : #bfe0f5;
+    --global-link-color-visited         : #7fbce0;
+    --global-masthead-link-color        : #e8eef5;
+    --global-masthead-link-color-hover  : #8fc8ec;
+    --global-text-color                 : #e8eef5;
+    --global-text-color-light           : #a6b6c8;
+    --global-thead-color                : #1c4670;
+
+    --cc-court                          : #f4f8fc;
+    --cc-court-bright                   : #8fc8ec;
+    --cc-paper                          : #15395c;
+    --cc-paper-card                     : #1c4670;
+    --cc-ink                            : #e8eef5;
+    --cc-brass                          : #7fbce0;
+    --cc-brass-soft                     : rgba(127, 188, 224, 0.28);
+    --cc-line                           : rgba(232, 238, 245, 0.20);
+
+    --accent-orange                     : #7fbce0;
+    --accent-orange-dim                 : rgba(127, 188, 224, 0.14);
+    --teal-dim                          : rgba(232, 238, 245, 0.06);
+    --badge-published                   : #8fc8ec;
+    --badge-review                      : #bfe0f5;
+    --badge-conference                  : #8fc8ec;
+    --surface                           : #1c4670;
+    --surface-elevated                  : #0f2c49;
 }

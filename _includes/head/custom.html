@@ -11,4 +11,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 
+<!-- Court theme: set early to avoid a flash; overrides the legacy light/dark toggle -->
+<script>
+  /* No // line comments here: layout:compress collapses newlines, which would
+     turn a // comment into one that swallows the rest of the script. */
+  (function () {
+    var valid = { grass: 1, clay: 1, hard: 1, night: 1 };
+    var t = localStorage.getItem('court-theme');
+    if (!valid[t]) { t = 'grass'; }
+    document.documentElement.setAttribute('data-theme', t);
+    try { localStorage.removeItem('theme'); } catch (e) {}
+  })();
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var swatches = document.querySelectorAll('.cc-swatch');
+    if (!swatches.length) { return; }
+    var current = document.documentElement.getAttribute('data-theme') || 'grass';
+    function mark(t) {
+      swatches.forEach(function (s) {
+        s.classList.toggle('is-active', s.getAttribute('data-court') === t);
+      });
+    }
+    mark(current);
+    swatches.forEach(function (s) {
+      s.addEventListener('click', function () {
+        var t = s.getAttribute('data-court');
+        document.documentElement.setAttribute('data-theme', t);
+        try { localStorage.setItem('court-theme', t); } catch (e) {}
+        mark(t);
+      });
+    });
+  });
+</script>
+
 <!-- end custom head snippets -->

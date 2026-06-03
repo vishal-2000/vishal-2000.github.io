@@ -141,6 +141,15 @@ code, pre, kbd, .section-label, .pub-status {
   &:last-child { border-bottom: 1px solid var(--cc-line); }
 }
 
+.cc-pub__media {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  background: var(--cc-paper-card);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
 .cc-pub__meta {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.68em;
@@ -271,8 +280,10 @@ code, pre, kbd, .section-label, .pub-status {
   z-index: 0;
 }
 
-.masthead,
-.page__footer { position: relative; z-index: 2; }
+/* Raise above the court-line motif without disturbing their positioning
+   (masthead is fixed, footer is absolute — both already positioned). */
+.masthead { z-index: 3; }
+.page__footer { z-index: 2; }
 
 @media (max-width: 760px) {
   .cc-court-lines { display: none; }
@@ -603,6 +614,71 @@ code, pre, kbd, .section-label, .pub-status {
   font-size: 0.95em;
   letter-spacing: 0.01em;
 }
+
+/* Court theme picker — four court-colour swatches.
+   Lives outside the greedy-nav link list (so overflow logic can't hide it),
+   pinned to the right of the masthead. */
+.masthead__inner-wrap { position: relative; }
+
+.cc-theme-picker {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  z-index: 30;
+}
+
+.cc-theme-picker .cc-swatch {
+  position: relative;
+  width: 18px;
+  height: 34px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 2.5px;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  line-height: 0;
+  opacity: 0.6;
+  transition: transform 0.15s ease, opacity 0.18s ease, box-shadow 0.18s ease;
+
+  &:hover { transform: translateY(-1px) scale(1.08); opacity: 1; }
+  &.is-active {
+    opacity: 1;
+    box-shadow: 0 0 0 1.5px var(--global-bg-color), 0 0 0 3px var(--cc-brass);
+  }
+  &:focus-visible { outline: 2px solid var(--cc-brass); outline-offset: 2px; }
+}
+
+/* Landscape court SVG, rotated 90° to read as a vertical court */
+.cc-court-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 34px;
+  height: 18px;
+  display: block;
+  border-radius: 2.5px;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Court lines */
+.cc-court-icon__lines { stroke: rgba(255, 255, 255, 0.9); }
+
+/* Surface colour per court type */
+.cc-swatch--grass .cc-court-icon__surface { fill: #2e7d4f; }
+.cc-swatch--clay  .cc-court-icon__surface { fill: #b3552f; }
+.cc-swatch--hard  .cc-court-icon__surface { fill: #2e6ba8; }
+.cc-swatch--night .cc-court-icon__surface { fill: #16241d; }
+.cc-swatch--night .cc-court-icon__lines   { stroke: rgba(224, 189, 118, 0.85); }
+
+/* Keep nav links clear of the picker on the right */
+.greedy-nav .visible-links { padding-right: 10.5em; }
 
 /* --------------------------------------------------------------------------
    FOOTER
