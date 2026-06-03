@@ -278,39 +278,51 @@ code, pre, kbd, .section-label, .pub-status {
   .cc-court-lines { display: none; }
 }
 
-.cc-home {
-  /* Empty page title placeholder collapses */
-  .page__title { display: none; }
+/* Home has an empty title placeholder; collapse it (hero supplies the name) */
+.cc-home .page__title { display: none; }
 
-  /* Minimal, generously spaced text column */
-  .page__content {
-    max-width: 560px;
-    margin: 0 auto;
-    text-align: left;
-    padding-bottom: 4em;
+/* A standalone text page (e.g. Off the Clock) shows its title as a hero name */
+.cc-text .page__title {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 3.1em !important;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--cc-court);
+  max-width: 560px;
+  margin: 1.4em auto 0.6em;
+  padding: 0;
+}
 
-    > p {
-      font-size: 1.06em;
-      line-height: 1.7;
-      margin: 0 0 0.6em;
-      color: var(--cc-ink);
-    }
+/* Minimal, generously spaced text column (home + text pages) */
+.cc-home .page__content,
+.cc-text .page__content {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 4em;
 
-    /* Each section label opens a new chunk with lots of air above it */
-    .section-label {
-      margin-top: 3.2em;
-      margin-bottom: 1em;
-    }
+  > p {
+    font-size: 1.06em;
+    line-height: 1.7;
+    margin: 0 0 0.6em;
+    color: var(--cc-ink);
+  }
 
-    /* Links: brass underline-on-hover, restrained */
-    a {
-      color: var(--cc-court-bright);
-      text-decoration: none;
-      border-bottom: 1px solid var(--cc-brass-soft);
-      transition: border-color 0.18s ease, color 0.18s ease;
+  /* Each section label opens a new chunk with lots of air above it */
+  .section-label {
+    margin-top: 3.2em;
+    margin-bottom: 1em;
+  }
 
-      &:hover { color: var(--cc-court); border-color: var(--cc-brass); }
-    }
+  /* Links: brass underline-on-hover, restrained */
+  a {
+    color: var(--cc-court-bright);
+    text-decoration: none;
+    border-bottom: 1px solid var(--cc-brass-soft);
+    transition: border-color 0.18s ease, color 0.18s ease;
+
+    &:hover { color: var(--cc-court); border-color: var(--cc-brass); }
   }
 }
 

@@ -24,9 +24,3 @@ Advised by [K.&nbsp;Madhava&nbsp;Krishna](https://scholar.google.com/citations?u
 Papers at ICRA 2024 and CASE 2023. Third at the ICRA OCRTOC, 2022. B.Tech in Computer Science from IIIT-H.
 
 <p class="cc-statement">What will it take before robots are capable enough to go do science for us?</p>
-
-<span class="section-label">Off the clock</span>
-
-I run, train in tennis, and play squash and table tennis.
-
-Football was once part of the rotation too, until geography intervened.

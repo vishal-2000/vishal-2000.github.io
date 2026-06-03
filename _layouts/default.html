@@ -11,7 +11,7 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body class="{% if page.url == '/' %}cc-home cc-minimal{% elsif page.url contains '/publications' %}cc-research cc-minimal{% elsif page.collection == 'publications' %}cc-pub-detail cc-minimal{% endif %}">
+  <body class="{% if page.url == '/' %}cc-home cc-minimal{% elsif page.url contains '/publications' %}cc-research cc-minimal{% elsif page.collection == 'publications' %}cc-pub-detail cc-minimal{% elsif page.cc_minimal %}cc-text cc-minimal{% endif %}">
 
     <!-- Court-line motif: faint cream sidelines framing the column -->
     <div class="cc-court-lines" aria-hidden="true"></div>
