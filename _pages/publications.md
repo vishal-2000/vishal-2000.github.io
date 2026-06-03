@@ -5,11 +5,23 @@ permalink: /publications/
 author_profile: false
 ---
 
+{% include base_path %}
 {% assign pubs_by_date = site.publications | sort: 'date' | reverse %}
 
 <div class="cc-pubs">
 {% for post in pubs_by_date %}
   <article class="cc-pub">
+    {% if post.teaser and post.teaser != "" %}
+      {% assign teaser_path = '/images/research/' | append: post.teaser | prepend: base_path %}
+      {% if post.teaser contains '.mp4' %}
+        <video class="cc-pub__media" autoplay loop muted playsinline preload="metadata"
+               {% if post.teaser_poster %}poster="{{ '/images/research/' | append: post.teaser_poster | prepend: base_path }}"{% endif %}>
+          <source src="{{ teaser_path }}" type="video/mp4" />
+        </video>
+      {% else %}
+        <img class="cc-pub__media" src="{{ teaser_path }}" alt="{{ post.title }}" loading="lazy" />
+      {% endif %}
+    {% endif %}
     <div class="cc-pub__meta">
       {{ post.date | date: "%Y" }}<span class="cc-pub__dot">·</span>{{ post.venue }}{% if post.category == "manuscripts" %}<span class="cc-pub__dot">·</span><span class="cc-pub__review">Under Review</span>{% endif %}
     </div>
