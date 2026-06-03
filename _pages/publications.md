@@ -34,6 +34,8 @@ author_profile: false
       {% if post.projecturl and post.projecturl != "" %}<a href="{{ post.projecturl }}" target="_blank" rel="noopener">Project</a>{% endif %}
       {% if post.codeurl and post.codeurl != "" %}<a href="{{ post.codeurl }}" target="_blank" rel="noopener">Code</a>{% endif %}
       {% if post.videourl and post.videourl != "" %}<a href="{{ post.videourl }}" target="_blank" rel="noopener">Video</a>{% endif %}
+      {% if post.news1url and post.news1url != "" %}<a href="{{ post.news1url }}" target="_blank" rel="noopener">News</a>{% endif %}
+      {% if post.news2url and post.news2url != "" %}<a href="{{ post.news2url }}" target="_blank" rel="noopener">Press</a>{% endif %}
     </div>
   </article>
 {% endfor %}
