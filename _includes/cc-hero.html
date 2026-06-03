@@ -1,0 +1,18 @@
+{% include base_path %}
+{% assign author = site.author %}
+
+<header class="cc-hero">
+  <h1 class="cc-hero__name">{{ author.name }}</h1>
+
+  <p class="cc-hero__subtitle">
+    MS Robotics&ensp;·&ensp;Carnegie Mellon&ensp;·&ensp;Pathak Lab
+  </p>
+
+  <nav class="cc-hero__links" aria-label="Profile links">
+    {% if author.googlescholar %}<a href="{{ author.googlescholar }}" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+    {% if author.github %}<a href="https://github.com/{{ author.github }}" aria-label="GitHub"><i class="fab fa-github"></i></a>{% endif %}
+    {% if author.twitter %}<a href="https://twitter.com/{{ author.twitter }}" aria-label="X"><i class="fab fa-x-twitter"></i></a>{% endif %}
+    {% if author.linkedin %}<a href="https://www.linkedin.com/in/{{ author.linkedin }}" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>{% endif %}
+    {% if author.email %}<a href="mailto:{{ author.email }}" aria-label="Email"><i class="fas fa-envelope"></i></a>{% endif %}
+  </nav>
+</header>

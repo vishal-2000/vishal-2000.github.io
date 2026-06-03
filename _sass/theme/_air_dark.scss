@@ -1,29 +1,30 @@
 /* ==========================================================================
-   CIRCUIT COURT — DARK MODE
+   CENTRE COURT — DARK MODE (night court)
+   Near-black green, cream text, brass accents — same language as the day court.
    ========================================================================== */
 
-$primary-color              : #00d4aa;
-$dark-primary-color         : #009980;
-$darker-primary-color       : #007a63;
-$light-primary-color        : #6b7892;
+$primary-color              : #e0bd76;   /* brass — links / accents */
+$dark-primary-color         : #c79f54;
+$darker-primary-color       : #a8853f;
+$light-primary-color        : #8a978f;   /* muted sage, secondary text */
 
-$background                 : #0d1117;
-$background-light           : #161b27;
-$background-lighter         : #1e2538;
-$text                       : #e8eaed;
-$link                       : #00d4aa;
-$link-dark                  : #009980;
-$link-light                 : #00efc0;
-$footer                     : #0a0e14;
+$background                 : #0f1511;   /* near-black green */
+$background-light           : #16201a;   /* card surface */
+$background-lighter         : #1d2a22;   /* sunk / thead */
+$text                       : #e7ece8;   /* cream */
+$link                       : #e0bd76;
+$link-dark                  : #c79f54;
+$link-light                 : #efd599;
+$footer                     : #0a0f0c;
 
-$danger-color               : #ff4d6d;
-$info-color                 : #48cae4;
-$notice-color               : #6b7892;
-$success-color              : #3ddc97;
-$warning-color              : #ffd166;
+$danger-color               : #ff8a82;
+$info-color                 : #9fd6b4;
+$notice-color               : #8a978f;
+$success-color              : #9fd6b4;
+$warning-color              : #e0bd76;
 
 $border-radius              : 6px;
-$box-shadow                 : 0 4px 24px rgba(0, 0, 0, 0.5);
+$box-shadow                 : 0 8px 30px rgba(0, 0, 0, 0.5);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
 $navicon-width              : 28px;
@@ -35,27 +36,37 @@ html[data-theme="dark"] {
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$footer};
-    --global-border-color               : #2d3752;
-    --global-dark-border-color          : #1e2538;
+    --global-border-color               : rgba(231, 236, 232, 0.16);
+    --global-dark-border-color          : rgba(231, 236, 232, 0.10);
     --global-code-background-color      : #{$background-light};
-    --global-code-text-color            : #{$primary-color};
+    --global-code-text-color            : #efd599;
     --global-fig-caption-color          : #{$light-primary-color};
     --global-link-color                 : #{$link};
     --global-link-color-hover           : #{$link-light};
     --global-link-color-visited         : #{$link-dark};
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-masthead-link-color-hover  : #{$link};
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$light-primary-color};
     --global-thead-color                : #{$background-lighter};
 
-    /* Custom theme tokens */
-    --accent-orange                     : #ff6b35;
-    --accent-orange-dim                 : rgba(255, 107, 53, 0.12);
-    --teal-dim                          : rgba(0, 212, 170, 0.10);
-    --badge-published                   : #3ddc97;
-    --badge-review                      : #ffd166;
-    --badge-conference                  : #48cae4;
+    /* Centre Court tokens (night-court roles) */
+    --cc-court                          : #f4efe1;   /* bright cream — headings */
+    --cc-court-bright                   : #e0bd76;   /* brass — links / tags */
+    --cc-paper                          : #0f1511;
+    --cc-paper-card                     : #16201a;
+    --cc-ink                            : #e7ece8;
+    --cc-brass                          : #e0bd76;
+    --cc-brass-soft                     : rgba(224, 189, 118, 0.24);
+    --cc-line                           : rgba(231, 236, 232, 0.12);
+
+    /* Legacy tokens kept so existing components still resolve */
+    --accent-orange                     : #e0bd76;
+    --accent-orange-dim                 : rgba(224, 189, 118, 0.12);
+    --teal-dim                          : rgba(231, 236, 232, 0.06);
+    --badge-published                   : #9fd6b4;
+    --badge-review                      : #e0bd76;
+    --badge-conference                  : #9fd6b4;
     --surface                           : #{$background-light};
     --surface-elevated                  : #{$background-lighter};
 }

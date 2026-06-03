@@ -1,29 +1,30 @@
 /* ==========================================================================
-   SUNLIT COURT — LIGHT MODE
+   CENTRE COURT — GREEN COURT (default theme)
+   The page itself is the court: deep grass green, cream text, brass accents.
    ========================================================================== */
 
-$primary-color              : #007a63;
-$dark-primary-color         : #005f4d;
-$darker-primary-color       : #004a3c;
-$light-primary-color        : #6b7280;
+$primary-color              : #d3b066;   /* brass — links / accents */
+$dark-primary-color         : #b8924a;
+$darker-primary-color       : #9a7a3a;
+$light-primary-color        : #aebaa6;   /* muted sage-cream, secondary text */
 
-$background                 : #f4f6fb;
-$background-light           : #ffffff;
-$background-lighter         : #eef1f8;
-$text                       : #111827;
-$link                       : #007a63;
-$link-dark                  : #005f4d;
-$link-light                 : #009678;
-$footer                     : #007a63;
+$background                 : #1d4a34;   /* court green */
+$background-light           : #21543b;   /* raised surface */
+$background-lighter         : #1a4430;   /* sunk / thead */
+$text                       : #ece6d6;   /* warm cream */
+$link                       : #d8b66e;
+$link-dark                  : #b8924a;
+$link-light                 : #eccd84;
+$footer                     : #173d2b;   /* darker court green */
 
-$danger-color               : #dc2626;
-$info-color                 : #0284c7;
-$notice-color               : #6b7280;
-$success-color              : #059669;
-$warning-color              : #b45309;
+$danger-color               : #e98c84;
+$info-color                 : #9fd6b4;
+$notice-color               : #aebaa6;
+$success-color              : #9fd6b4;
+$warning-color              : #eccd84;
 
 $border-radius              : 6px;
-$box-shadow                 : 0 4px 24px rgba(0, 0, 0, 0.08);
+$box-shadow                 : 0 8px 30px rgba(0, 0, 0, 0.22);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
 $navicon-width              : 28px;
@@ -35,27 +36,37 @@ $sidebar-screen-min-width   : 1024px;
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$footer};
-    --global-border-color               : #d1d5db;
-    --global-dark-border-color          : #e5e7eb;
-    --global-code-background-color      : #f3f4f6;
-    --global-code-text-color            : #{$primary-color};
+    --global-border-color               : rgba(236, 230, 214, 0.18);
+    --global-dark-border-color          : rgba(236, 230, 214, 0.12);
+    --global-code-background-color      : #1a4430;
+    --global-code-text-color            : #eccd84;
     --global-fig-caption-color          : #{$light-primary-color};
     --global-link-color                 : #{$link};
-    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-hover           : #{$link-light};
     --global-link-color-visited         : #{$link-dark};
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-masthead-link-color-hover  : #{$link};
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$light-primary-color};
     --global-thead-color                : #{$background-lighter};
 
-    /* Custom theme tokens */
-    --accent-orange                     : #d4500e;
-    --accent-orange-dim                 : rgba(212, 80, 14, 0.10);
-    --teal-dim                          : rgba(0, 122, 99, 0.08);
-    --badge-published                   : #059669;
-    --badge-review                      : #b45309;
-    --badge-conference                  : #0284c7;
+    /* Centre Court tokens (green-court roles) */
+    --cc-court                          : #f4efe1;   /* bright cream — headings */
+    --cc-court-bright                   : #d8b66e;   /* brass — links / tags */
+    --cc-paper                          : #1d4a34;   /* page bg */
+    --cc-paper-card                     : #21543b;
+    --cc-ink                            : #ece6d6;   /* body text */
+    --cc-brass                          : #d3b066;
+    --cc-brass-soft                     : rgba(211, 176, 102, 0.22);
+    --cc-line                           : rgba(236, 230, 214, 0.16);
+
+    /* Legacy tokens kept so existing components still resolve */
+    --accent-orange                     : #d3b066;
+    --accent-orange-dim                 : rgba(211, 176, 102, 0.12);
+    --teal-dim                          : rgba(236, 230, 214, 0.06);
+    --badge-published                   : #9fd6b4;
+    --badge-review                      : #eccd84;
+    --badge-conference                  : #9fd6b4;
     --surface                           : #{$background-light};
     --surface-elevated                  : #{$background-lighter};
 }
