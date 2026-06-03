@@ -10,5 +10,7 @@
 main:
   - title: "Research"
     url: /publications/
+  - title: "Reading"
+    url: /reading/
   - title: "Off the Clock"
     url: /off-the-clock/

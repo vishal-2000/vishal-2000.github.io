@@ -1,0 +1,60 @@
+# Reading list — drives the /reading/ shelves.
+# Each entry: title, author, cover (filename stem in images/books/).
+
+currently:
+  - title: "The Inner Game of Tennis"
+    author: "W. Timothy Gallwey"
+    cover: inner-game-of-tennis
+  - title: "The Caves of Steel"
+    author: "Isaac Asimov"
+    cover: caves-of-steel
+  - title: "General Relativity — The Theoretical Minimum"
+    author: "Leonard Susskind & André Cabannes"
+    cover: general-relativity-tm
+
+read:
+  - title: "The Alchemist"
+    author: "Paulo Coelho"
+    cover: alchemist
+  - title: "I, Robot"
+    author: "Isaac Asimov"
+    cover: i-robot
+  - title: "Frankenstein"
+    author: "Mary Shelley"
+    cover: frankenstein
+  - title: "The Best Laid Plans"
+    author: "Sidney Sheldon"
+    cover: best-laid-plans
+  - title: "A Good Girl's Guide to Murder"
+    author: "Holly Jackson"
+    cover: good-girls-guide
+  - title: "Good Girl, Bad Blood"
+    author: "Holly Jackson"
+    cover: good-girl-bad-blood
+  - title: "Zero to One"
+    author: "Peter Thiel"
+    cover: zero-to-one
+  - title: "The Subtle Art of Not Giving a F*ck"
+    author: "Mark Manson"
+    cover: subtle-art
+  - title: "The 7 Habits of Highly Effective People"
+    author: "Stephen R. Covey"
+    cover: seven-habits
+  - title: "The Last Lecture"
+    author: "Randy Pausch"
+    cover: last-lecture
+  - title: "The Alignment Problem"
+    author: "Brian Christian"
+    cover: alignment-problem
+  - title: "Einstein: Relatively Simple"
+    author: "Ira Mark Egdall"
+    cover: einstein-relatively-simple
+  - title: "Steve Jobs: The Man Who Thought Different"
+    author: "Karen Blumenthal"
+    cover: steve-jobs-blumenthal
+  - title: "Steve Jobs"
+    author: "Walter Isaacson"
+    cover: steve-jobs-isaacson
+  - title: "Elon Musk"
+    author: "Walter Isaacson"
+    cover: elon-musk
