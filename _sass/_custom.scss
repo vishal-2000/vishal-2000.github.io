@@ -631,6 +631,15 @@ code, pre, kbd, .section-label, .pub-status {
   z-index: 30;
 }
 
+/* Desktop: swatches shown inline; the dropdown toggle is hidden */
+.cc-theme-toggle { display: none; }
+
+.cc-theme-panel {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
 .cc-theme-picker .cc-swatch {
   position: relative;
   width: 18px;
@@ -677,8 +686,64 @@ code, pre, kbd, .section-label, .pub-status {
 .cc-swatch--night .cc-court-icon__surface { fill: #16241d; }
 .cc-swatch--night .cc-court-icon__lines   { stroke: rgba(224, 189, 118, 0.85); }
 
-/* Keep nav links clear of the picker on the right */
+/* Keep nav links clear of the picker on the right (desktop only) */
 .greedy-nav .visible-links { padding-right: 10.5em; }
+
+/* Mobile: collapse the swatches into a dropdown that sits side-by-side with
+   the greedy-nav tabs hamburger (which is pinned at right:0). */
+@media (max-width: 768px) {
+  .greedy-nav .visible-links { padding-right: 0; }
+
+  /* Park the picker just left of the hamburger */
+  .cc-theme-picker {
+    right: 2.6rem;
+    z-index: 110;          /* above the hamburger (100) so the panel layers right */
+  }
+
+  /* Show the toggle, styled like the hamburger button */
+  .cc-theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.2rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--global-masthead-link-color);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .cc-court-icon--toggle { width: 26px; height: 13px; }
+
+  /* Panel becomes a dropdown, mirroring the tabs dropdown styling */
+  .cc-theme-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 15px;
+    padding: 0.55em 0.7em;
+    gap: 0.55em;
+    border: 1px solid var(--global-border-color);
+    border-radius: 6px;
+    background: var(--global-bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+  .cc-theme-picker.is-open .cc-theme-panel { display: flex; }
+
+  /* Caret matching the tabs dropdown */
+  .cc-theme-picker.is-open .cc-theme-panel::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 12px;
+    border-style: solid;
+    border-width: 0 9px 10px;
+    border-color: var(--global-bg-color) transparent;
+  }
+}
 
 /* --------------------------------------------------------------------------
    FOOTER

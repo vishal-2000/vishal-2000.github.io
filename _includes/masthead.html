@@ -23,24 +23,39 @@
       </nav>
     </div>
 
+    {% assign courts = "grass,clay,hard,night" | split: "," %}
     <div class="cc-theme-picker" role="group" aria-label="Court theme">
-      {% assign courts = "grass,clay,hard,night" | split: "," %}
-      {% for c in courts %}
-      <button class="cc-swatch cc-swatch--{{ c }}" type="button" data-court="{{ c }}" title="{{ c | capitalize }} court" aria-label="{{ c | capitalize }} court">
-        <svg class="cc-court-icon" viewBox="0 0 30 15" aria-hidden="true">
-          <rect class="cc-court-icon__surface" x="0" y="0" width="30" height="15" rx="1.5"/>
-          <g class="cc-court-icon__lines" fill="none" stroke-width="0.7" stroke-linecap="round">
-            <rect x="2" y="2" width="26" height="11" rx="0.4"/>
-            <line x1="15" y1="2"   x2="15" y2="13"/>
-            <line x1="2"  y1="4"   x2="28" y2="4"/>
-            <line x1="2"  y1="11"  x2="28" y2="11"/>
+      <button class="cc-theme-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Choose court theme">
+        <svg class="cc-court-icon cc-court-icon--toggle" viewBox="0 0 30 15" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+            <rect x="1" y="1" width="28" height="13" rx="1.2"/>
+            <line x1="15" y1="1"   x2="15" y2="14"/>
+            <line x1="1"  y1="4"   x2="29" y2="4"/>
+            <line x1="1"  y1="11"  x2="29" y2="11"/>
             <line x1="9"  y1="4"   x2="9"  y2="11"/>
             <line x1="21" y1="4"   x2="21" y2="11"/>
             <line x1="9"  y1="7.5" x2="21" y2="7.5"/>
           </g>
         </svg>
       </button>
-      {% endfor %}
+      <div class="cc-theme-panel">
+        {% for c in courts %}
+        <button class="cc-swatch cc-swatch--{{ c }}" type="button" data-court="{{ c }}" title="{{ c | capitalize }} court" aria-label="{{ c | capitalize }} court">
+          <svg class="cc-court-icon" viewBox="0 0 30 15" aria-hidden="true">
+            <rect class="cc-court-icon__surface" x="0" y="0" width="30" height="15" rx="1.5"/>
+            <g class="cc-court-icon__lines" fill="none" stroke-width="0.7" stroke-linecap="round">
+              <rect x="2" y="2" width="26" height="11" rx="0.4"/>
+              <line x1="15" y1="2"   x2="15" y2="13"/>
+              <line x1="2"  y1="4"   x2="28" y2="4"/>
+              <line x1="2"  y1="11"  x2="28" y2="11"/>
+              <line x1="9"  y1="4"   x2="9"  y2="11"/>
+              <line x1="21" y1="4"   x2="21" y2="11"/>
+              <line x1="9"  y1="7.5" x2="21" y2="7.5"/>
+            </g>
+          </svg>
+        </button>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
