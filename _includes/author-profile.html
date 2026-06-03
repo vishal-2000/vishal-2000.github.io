@@ -7,11 +7,20 @@
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
-    {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
-    {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
-    {% endif %}
+    {% assign goof_dir = "/images/goofs/" | prepend: base_path %}
+    {% capture goof_list %}{% for n in (1..8) %}{{ goof_dir }}goof-{{ n }}.jpg{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+    <img id="author-goof"
+         src="{{ goof_dir }}goof-1.jpg"
+         data-goofs="{{ goof_list }}"
+         alt="{{ author.name }}" fetchpriority="high" />
+    <script>
+      (function () {
+        var img = document.getElementById('author-goof');
+        if (!img) return;
+        var pics = (img.getAttribute('data-goofs') || '').split(',').filter(Boolean);
+        if (pics.length) img.src = pics[Math.floor(Math.random() * pics.length)];
+      })();
+    </script>
   </div>
 
   <div class="author__content">

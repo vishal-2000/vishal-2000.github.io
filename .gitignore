@@ -1,0 +1,16 @@
+# Jekyll build output (GitHub Pages rebuilds from source)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler / dependencies
+vendor/
+.bundle/
+
+# Node
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+*.swp
