@@ -22,20 +22,21 @@ author_profile: false
         <img class="cc-pub__media" src="{{ teaser_path }}" alt="{{ post.title }}" loading="lazy" />
       {% endif %}
     {% endif %}
-    <div class="cc-pub__meta">
-      {{ post.date | date: "%Y" }}<span class="cc-pub__dot">·</span>{{ post.venue }}{% if post.category == "manuscripts" %}<span class="cc-pub__dot">·</span><span class="cc-pub__review">Under Review</span>{% endif %}
-    </div>
-    <h2 class="cc-pub__title">
-      <a href="{{ post.permalink | default: post.url }}">{{ post.title }}</a>
-    </h2>
-    {% if post.excerpt %}<p class="cc-pub__excerpt">{{ post.excerpt }}</p>{% endif %}
-    <div class="cc-pub__links">
-      {% if post.paperurl and post.paperurl != "" %}<a href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>{% endif %}
-      {% if post.projecturl and post.projecturl != "" %}<a href="{{ post.projecturl }}" target="_blank" rel="noopener">Project</a>{% endif %}
-      {% if post.codeurl and post.codeurl != "" %}<a href="{{ post.codeurl }}" target="_blank" rel="noopener">Code</a>{% endif %}
-      {% if post.videourl and post.videourl != "" %}<a href="{{ post.videourl }}" target="_blank" rel="noopener">Video</a>{% endif %}
-      {% if post.news1url and post.news1url != "" %}<a href="{{ post.news1url }}" target="_blank" rel="noopener">News</a>{% endif %}
-      {% if post.news2url and post.news2url != "" %}<a href="{{ post.news2url }}" target="_blank" rel="noopener">Press</a>{% endif %}
+    <div class="cc-pub__body">
+      <div class="cc-pub__meta">
+        {{ post.date | date: "%Y" }}<span class="cc-pub__dot">·</span>{{ post.venue }}{% if post.category == "manuscripts" %}<span class="cc-pub__dot">·</span><span class="cc-pub__review">Under Review</span>{% endif %}
+      </div>
+      <h2 class="cc-pub__title">
+        <a href="{{ post.permalink | default: post.url }}">{{ post.title }}</a>
+      </h2>
+      <div class="cc-pub__links">
+        {% if post.paperurl and post.paperurl != "" %}<a href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>{% endif %}
+        {% if post.projecturl and post.projecturl != "" %}<a href="{{ post.projecturl }}" target="_blank" rel="noopener">Project</a>{% endif %}
+        {% if post.codeurl and post.codeurl != "" %}<a href="{{ post.codeurl }}" target="_blank" rel="noopener">Code</a>{% endif %}
+        {% if post.videourl and post.videourl != "" %}<a href="{{ post.videourl }}" target="_blank" rel="noopener">Video</a>{% endif %}
+        {% if post.news1url and post.news1url != "" %}<a href="{{ post.news1url }}" target="_blank" rel="noopener">News</a>{% endif %}
+        {% if post.news2url and post.news2url != "" %}<a href="{{ post.news2url }}" target="_blank" rel="noopener">Press</a>{% endif %}
+      </div>
     </div>
   </article>
 {% endfor %}

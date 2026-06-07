@@ -134,40 +134,46 @@ code, pre, kbd, .section-label, .pub-status {
   }
 }
 
+/* Compact horizontal card: small thumbnail left, text right */
 .cc-pub {
-  padding: 2em 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1em;
+  padding: 1.15em 0;
   border-top: 1px solid var(--cc-line);
 
   &:last-child { border-bottom: 1px solid var(--cc-line); }
 }
 
 .cc-pub__media {
-  display: block;
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 1em;
+  flex: 0 0 auto;
+  width: 116px;
+  border-radius: 4px;
+  margin: 0;
   background: var(--cc-paper-card);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
+
+.cc-pub__body { flex: 1; min-width: 0; }
 
 .cc-pub__meta {
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.68em;
-  letter-spacing: 0.06em;
+  font-size: 0.6em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--global-text-color-light);
-  margin-bottom: 0.6em;
+  margin-bottom: 0.4em;
 }
 
-.cc-pub__dot { margin: 0 0.55em; opacity: 0.5; }
+.cc-pub__dot { margin: 0 0.45em; opacity: 0.5; }
 
 .cc-pub__review { color: var(--cc-brass); }
 
 .cc-pub__title {
   font-family: "Fraunces", Georgia, serif;
   font-weight: 600;
-  font-size: 1.25em;
-  line-height: 1.3;
+  font-size: 1.02em;
+  line-height: 1.28;
   margin: 0 0 0.5em;
 
   a {
@@ -179,23 +185,15 @@ code, pre, kbd, .section-label, .pub-status {
   }
 }
 
-.cc-pub__excerpt {
-  font-size: 0.95em;
-  line-height: 1.6;
-  color: var(--cc-ink);
-  opacity: 0.82;
-  margin: 0 0 0.9em;
-}
-
 .cc-pub__links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.4em;
+  gap: 1em;
 
   a {
     font-family: "JetBrains Mono", monospace;
-    font-size: 0.7em;
-    letter-spacing: 0.06em;
+    font-size: 0.62em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--cc-court-bright);
     text-decoration: none;
@@ -203,6 +201,10 @@ code, pre, kbd, .section-label, .pub-status {
     transition: color 0.18s ease, border-color 0.18s ease;
     &:hover { color: var(--cc-court); border-color: var(--cc-brass); }
   }
+}
+
+@media (max-width: 480px) {
+  .cc-pub__media { width: 92px; }
 }
 
 /* --------------------------------------------------------------------------
